@@ -33,6 +33,11 @@ cd ..
 npm run ios
 ```
 
+`npm run ios` tự kiểm tra và cài lại Pods khi cần qua `react-native.config.js`.
+Nếu mở bằng Xcode, dùng `ios/chatbot_ai_rn.xcworkspace` sau khi cài Pods.
+Lỗi thiếu `Pods-chatbot_ai_rn.debug.xcconfig` hoặc `.xcfilelist` nghĩa là Pods
+chưa được cài thành công; chạy lại `bundle exec pod install` trong thư mục `ios`.
+
 URL mẫu dùng HTTPS nên không cần mở ATS/cleartext. Chưa triển khai luồng camera, microphone và download file.
 
 ## Cấu hình
